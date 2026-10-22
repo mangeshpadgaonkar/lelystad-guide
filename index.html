@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Lelystad Guide — Community Resource</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F0F4F0;
+    --surface: #FFFFFF;
+    --surface-alt: #E8EDE8;
+    --text: #1A2B1A;
+    --text-muted: #5A6B5A;
+    --accent: #2D6A4F;
+    --accent-light: #52B788;
+    --accent-pale: #D8EDDF;
+    --border: #C8D8C8;
+    --tag-bg: #D8EDDF;
+    --tag-text: #1B4332;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0F1A0F;
+      --surface: #1A2B1A;
+      --surface-alt: #162516;
+      --text: #E8F0E8;
+      --text-muted: #8AA88A;
+      --accent: #52B788;
+      --accent-light: #74C69D;
+      --accent-pale: #1B3A2A;
+      --border: #2D4A2D;
+      --tag-bg: #1B3A2A;
+      --tag-text: #74C69D;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0F1A0F;
+    --surface: #1A2B1A;
+    --surface-alt: #162516;
+    --text: #E8F0E8;
+    --text-muted: #8AA88A;
+    --accent: #52B788;
+    --accent-light: #74C69D;
+    --accent-pale: #1B3A2A;
+    --border: #2D4A2D;
+    --tag-bg: #1B3A2A;
+    --tag-text: #74C69D;
+  }
+  *, *::before, *::after { box-sizing: inherit; margin: 0; padding: 0; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky;
+    top: env(safe-area-inset-top, 0px);
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    z-index: 100;
+    padding: 0 24px;
+  }
+  .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+    gap: 16px;
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    color: var(--accent);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav-links {
+    display: flex;
+    gap: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .nav-links::-webkit-scrollbar { display: none; }
+  .nav-links a {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 6px;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-links a:hover, .nav-links a.active {
+    background: var(--accent-pale);
+    color: var(--accent);
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--accent);
+    color: #fff;
+    padding: 64px 24px 56px;
+    text-align: center;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--accent-light);
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.15;
+    color: #fff;
+    margin-bottom: 16px;
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .hero p {
+    color: rgba(255,255,255,0.78);
+    font-size: 1rem;
+    max-width: 480px;
+    margin: 0 auto 28px;
+  }
+  .gemeente-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.15);
+    border: 1.5px solid rgba(255,255,255,0.4);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: background 0.15s;
+  }
+  .gemeente-btn:hover { background: rgba(255,255,255,0.25); }
+
+  /* SEARCH */
+  .search-bar {
+    background: var(--surface);
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 56px;
+    z-index: 90;
+  }
+  .search-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .search-inner input {
+    flex: 1;
+    padding: 10px 16px;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background: var(--bg);
+    color: var(--text);
+    outline: none;
+  }
+  .search-inner input:focus { border-color: var(--accent-light); }
+  .search-inner input::placeholder { color: var(--text-muted); }
+
+  /* DISCLAIMER */
+  .disclaimer {
+    max-width: 1100px;
+    margin: 24px auto 0;
+    padding: 0 24px;
+  }
+  .disclaimer-box {
+    background: var(--accent-pale);
+    border-left: 3px solid var(--accent-light);
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+
+  /* MAIN LAYOUT */
+  .main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  /* SECTION */
+  .section {
+    margin-bottom: 56px;
+    scroll-margin-top: 120px;
+  }
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+  }
+  .section-icon { font-size: 1.3rem; }
+  .section-header h2 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.45rem;
+    color: var(--text);
+  }
+  .section-count {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    background: var(--surface-alt);
+    padding: 2px 8px;
+    border-radius: 20px;
+  }
+
+  /* GRID */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: box-shadow 0.15s;
+  }
+  .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.07); }
+  .card-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+  .card-desc {
+    font-size: 0.84rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+  }
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+  }
+  .tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    background: var(--tag-bg);
+    color: var(--tag-text);
+    padding: 3px 9px;
+    border-radius: 20px;
+  }
+  .tag.location { background: var(--surface-alt); color: var(--text-muted); }
+  .card-contact {
+    font-size: 0.8rem;
+    color: var(--accent);
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin-top: 2px;
+  }
+  .card-contact a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .card-contact a:hover { text-decoration: underline; }
+
+  /* HARD TO FIND TABLE */
+  .htf-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  .htf-table th {
+    text-align: left;
+    padding: 10px 14px;
+    background: var(--surface-alt);
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.78rem;
+    border-bottom: 2px solid var(--border);
+  }
+  .htf-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+    color: var(--text);
+    background: var(--surface);
+  }
+  .htf-table tr:last-child td { border-bottom: none; }
+  .htf-table td:first-child { font-weight: 600; white-space: nowrap; }
+
+  /* FOOTER */
+  footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 32px 24px;
+    text-align: center;
+  }
+  .footer-inner { max-width: 1100px; margin: 0 auto; }
+  footer p { font-size: 0.8rem; color: var(--text-muted); }
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  /* HIDDEN for search */
+  .hidden { display: none !important; }
+
+  @media (max-width: 600px) {
+    .nav-links { display: none; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .hero { padding: 40px 20px; }
+    .htf-table th, .htf-table td { padding: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo">Lelystad Guide</a>
+    <div class="nav-links">
+      <a href="#groceries">Groceries</a>
+      <a href="#restaurants">Restaurants</a>
+      <a href="#food-delivery">Food Delivery</a>
+      <a href="#hard-to-find">Hard to Find</a>
+      <a href="#services">Services</a>
+      <a href="#home">Home & Trades</a>
+      <a href="#transport">Transport</a>
+      <a href="#misc">Misc</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero" id="top">
+  <div class="hero-eyebrow">Community Resource · Lelystad, Netherlands</div>
+  <h1>Your local guide to living well in Lelystad</h1>
+  <p>Shops, restaurants, tradespeople, and services — recommended by residents who've used them.</p>
+  <a href="https://www.lelystad.nl" target="_blank" rel="noopener" class="gemeente-btn">
+    🏛️ Gemeente Lelystad website
+  </a>
+</div>
+
+<div class="search-bar">
+  <div class="search-inner">
+    <input type="text" id="searchInput" placeholder="Search for a shop, service, or person…" oninput="filterCards(this.value)" autocomplete="off">
+  </div>
+</div>
+
+<div class="disclaimer">
+  <div class="disclaimer-box">
+    <strong>Note:</strong> This guide contains information compiled from community members. We do not endorse or guarantee any service provider listed. Conduct your own due diligence. Prices and availability may have changed.
+  </div>
+</div>
+
+<main class="main">
+
+  <!-- GROCERIES -->
+  <section class="section" id="groceries">
+    <div class="section-header">
+      <span class="section-icon">🛒</span>
+      <h2>Groceries</h2>
+      <span class="section-count">10 listings</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card searchable">
+        <div class="card-name">Ams Food Market</div>
+        <div class="card-desc">Grocery store in Lelystad. Also present at the Saturday market with fresh food: idli, dosa and other South Indian specialities. Also available on Thuisbezorgd.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Indian</span><span class="tag">Saturday Market</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Indian Meat Wave</div>
+        <div class="card-desc">Goat meat (Halal), Indian fish varieties, and seafood including crab.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Halal</span><span class="tag">Seafood</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">LelyKirana</div>
+        <div class="card-desc">Grocery delivery based in Lelystad. Stocks fresh Indian vegetables: methi, ladyfinger, brinjal and more.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Delivery</span><span class="tag">Fresh Veg</span></div>
+        <div class="card-contact"><a href="https://lelykirana.nl" target="_blank">lelykirana.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Vikash Cosmetics</div>
+        <div class="card-desc">Grocery store based in Lelystad with Indian products.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Indian</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">ER Slagerij (LelyCentre)</div>
+        <div class="card-desc">Not an Indian store, but offers fresh goat meat and whole spices: cumin, cinnamon, cardamom.</div>
+        <div class="card-meta"><span class="tag location">LelyCentre</span><span class="tag">Goat Meat</span><span class="tag">Spices</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Mix Markt</div>
+        <div class="card-desc">Not an Indian store, but carries lamb and sometimes goat meat. Also stocks whole spices like cumin, cinnamon, and cardamom.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Lamb</span><span class="tag">Spices</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Tropisch Centrum Oompie</div>
+        <div class="card-desc">Surinamese store in Lelystad. Stocks most Indian grocery staples.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Surinamese</span><span class="tag">Indian</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Chilly Flakes</div>
+        <div class="card-desc">Delivers to Lelystad. Based in Almere.</div>
+        <div class="card-meta"><span class="tag location">Almere</span><span class="tag">Delivery</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Ganesha Store</div>
+        <div class="card-desc">Indian grocery store based in Almere.</div>
+        <div class="card-meta"><span class="tag location">Almere</span></div>
+        <div class="card-contact"><a href="https://ganeshstore.nl" target="_blank">ganeshstore.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Sara Foods</div>
+        <div class="card-desc">Grocery delivery serving both Almere and Lelystad.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Delivery</span></div>
+        <div class="card-contact"><a href="https://sarafoods.nl" target="_blank">sarafoods.nl</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RESTAURANTS -->
+  <section class="section" id="restaurants">
+    <div class="section-header">
+      <span class="section-icon">🍽️</span>
+      <h2>Restaurants</h2>
+      <span class="section-count">2 listings</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card searchable">
+        <div class="card-name">Indian Taste</div>
+        <div class="card-desc">Order via their website (sometimes offers discounts) or Thuisbezorgd. Has 1–2 tables at the location.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Dine-in</span><span class="tag">Delivery</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Sher-E-Punjab</div>
+        <div class="card-desc">Order via their website or Thuisbezorgd. Full restaurant setup with multiple tables.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Full Restaurant</span><span class="tag">Delivery</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOD DELIVERY / PICKUP / HOME KITCHENS -->
+  <section class="section" id="food-delivery">
+    <div class="section-header">
+      <span class="section-icon">📦</span>
+      <h2>Food Delivery &amp; Home Kitchens</h2>
+      <span class="section-count">11 listings</span>
+    </div>
+    <p style="font-size:0.84rem;color:var(--text-muted);margin-bottom:16px;">Many of these operate via the <strong>Lelystad Food Connect</strong> Facebook group — join to see menus and place orders.</p>
+    <div class="cards-grid">
+
+      <div class="card searchable">
+        <div class="card-name">Koku's Kitchen</div>
+        <div class="card-desc">Check the Lelystad Food Connect group for menus. Takes party orders.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Party Orders</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Farah's Kitchen</div>
+        <div class="card-desc">Check the Lelystad Food Connect group for menus. Takes party orders.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Party Orders</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Indian Biryani Zone</div>
+        <div class="card-desc">Check the Lelystad Food Connect group for menus. Takes party orders.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Biryani</span><span class="tag">Party Orders</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Jain Kitchen</div>
+        <div class="card-desc">Check the Lelystad Food Connect group for menus. Takes party orders.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Jain Food</span><span class="tag">Party Orders</span></div>
+        <div class="card-contact"><a href="tel:+31625206866">+31 6 25206866</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Yoshi's Kitchen</div>
+        <div class="card-desc">Check the Lelystad Food Connect group for menus. Takes party orders.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Party Orders</span></div>
+        <div class="card-contact"><a href="https://yoshiskitchen.nl" target="_blank">yoshiskitchen.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Sara Foods</div>
+        <div class="card-desc">Check the Lelystad Food Connect group for menus.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span></div>
+        <div class="card-contact"><a href="https://sarafoods.nl" target="_blank">sarafoods.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Indian Plate Almere</div>
+        <div class="card-desc">Delivers to Lelystad. Based in Almere.</div>
+        <div class="card-meta"><span class="tag location">Almere</span><span class="tag">Delivery to Lelystad</span></div>
+        <div class="card-contact"><a href="tel:+918019697900">+91 8019697900</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">North Indian–Rajasthani Rasoi</div>
+        <div class="card-desc">North Indian and Rajasthani cuisine. Delivers to Lelystad. Based in Almere.</div>
+        <div class="card-meta"><span class="tag location">Almere</span><span class="tag">Rajasthani</span><span class="tag">Delivery to Lelystad</span></div>
+        <div class="card-contact"><a href="tel:+31620501182">+31 6 20501182</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Taste of Godavari</div>
+        <div class="card-desc">Based in Almere, delivers to Lelystad. Check Lelystad Food Connect group for menus.</div>
+        <div class="card-meta"><span class="tag location">Almere</span><span class="tag">Delivery to Lelystad</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Taste of Nepal — Sharda Rai</div>
+        <div class="card-desc">Cloud kitchen. Indian/Nepali style momos and more.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Nepali</span><span class="tag">Momos</span></div>
+        <div class="card-contact"><a href="tel:+31628915869">+31 6 28915869</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Ams Food Market (Stall)</div>
+        <div class="card-desc">Food stall serving idli, dosa, roti roll, and biryani, alongside groceries.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Saturday Market</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HARD TO FIND FOODS -->
+  <section class="section" id="hard-to-find">
+    <div class="section-header">
+      <span class="section-icon">🔍</span>
+      <h2>Hard to Find Foods</h2>
+    </div>
+    <div style="overflow-x:auto; border-radius:10px; border:1px solid var(--border);">
+      <table class="htf-table">
+        <thead>
+          <tr><th>Item</th><th>Where to find it</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Fish &amp; Seafood</td>
+            <td>
+              1. Saturday Market<br>
+              2. Alboranseá (LelyCentre) — both cooked and raw; cooked available via Thuisbezorgd<br>
+              3. Indian Meat Wave
+            </td>
+          </tr>
+          <tr>
+            <td>Goat Meat</td>
+            <td>
+              1. Sara Foods<br>
+              2. ER Slagerij (LelyCentre)<br>
+              3. Mix Markt (sometimes)<br>
+              4. Indian Meat Wave
+            </td>
+          </tr>
+          <tr>
+            <td>Momos (Indian / Nepali Style)</td>
+            <td>Taste of Nepal — Sharda Rai — Cloud Kitchen — <a href="tel:+31628915869">+31 6 28915869</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section" id="services">
+    <div class="section-header">
+      <span class="section-icon">⚙️</span>
+      <h2>Utility &amp; Service Providers</h2>
+      <span class="section-count">8 listings</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card searchable">
+        <div class="card-name">Liander</div>
+        <div class="card-desc">Power grid operator for Lelystad — regardless of your energy provider. Check for outages and planned maintenance on their website.</div>
+        <div class="card-meta"><span class="tag">Electricity Grid</span></div>
+        <div class="card-contact"><a href="https://www.liander.nl/storingen-en-onderhoud" target="_blank">liander.nl/storingen</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Vitens</div>
+        <div class="card-desc">Water provider for Lelystad. Check service issues via waterstoring.nl.</div>
+        <div class="card-meta"><span class="tag">Water</span></div>
+        <div class="card-contact"><a href="https://waterstoring.nl" target="_blank">waterstoring.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Odido</div>
+        <div class="card-desc">Internet service provider operating in Lelystad.</div>
+        <div class="card-meta"><span class="tag">Internet</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Feenstra</div>
+        <div class="card-desc">Boiler maintenance and related services. Tip: boiler maintenance should be done every 1.5 years. Always go for a trusted company.</div>
+        <div class="card-meta"><span class="tag">Boiler</span><span class="tag">Maintenance</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Rishi (Plumber)</div>
+        <div class="card-desc">Plumber based in Lelystad area.</div>
+        <div class="card-meta"><span class="tag">Plumbing</span></div>
+        <div class="card-contact"><a href="tel:0634929952">0634929952</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Zeker en Mobiel</div>
+        <div class="card-desc">Drainage cleaning and maintenance.</div>
+        <div class="card-meta"><span class="tag">Drainage</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Ventilation Services</div>
+        <div class="card-desc">If you have mechanical ventilation, it must be cleaned and maintained regularly by a certified company for healthy air quality.</div>
+        <div class="card-meta"><span class="tag">Ventilation</span><span class="tag">Maintenance</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Ramoe</div>
+        <div class="card-desc">Electrical services. Based in Lelystad.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Electrician</span></div>
+        <div class="card-contact"><a href="tel:+31627506692">+31 6 27506692</a> · <a href="https://tedar.nl" target="_blank">tedar.nl</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- HOME & TRADES -->
+  <section class="section" id="home">
+    <div class="section-header">
+      <span class="section-icon">🏠</span>
+      <h2>Home, Trades &amp; Renovation</h2>
+      <span class="section-count">20+ listings</span>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;margin-top:4px;">Cleaning</h3>
+    <div class="cards-grid" style="margin-bottom:24px;">
+      <div class="card searchable">
+        <div class="card-name">Cleannet</div>
+        <div class="card-desc">Fixed pricing, multiple employees. One-time or recurring schedule with the same cleaner. Works with invoice — no cash.</div>
+        <div class="card-meta"><span class="tag">Cleaning</span></div>
+        <div class="card-contact"><a href="https://cleannet.nl" target="_blank">cleannet.nl</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Viviane</div>
+        <div class="card-desc">House cleaner.</div>
+        <div class="card-meta"><span class="tag">Cleaning</span></div>
+        <div class="card-contact"><a href="tel:+31634530567">+31 6 34530567</a></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;">Painters</h3>
+    <div class="cards-grid" style="margin-bottom:24px;">
+      <div class="card searchable">
+        <div class="card-name">Michelle Hrazdira</div>
+        <div class="card-desc">Specialist in painting windows and doors.</div>
+        <div class="card-meta"><span class="tag">Painting</span></div>
+        <div class="card-contact"><a href="tel:0620145381">0620145381</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Eser</div>
+        <div class="card-desc">Stucco/plaster, painting, and other handyman work.</div>
+        <div class="card-meta"><span class="tag">Plastering</span><span class="tag">Painting</span></div>
+        <div class="card-contact"><a href="tel:+31611518042">+31 6 11518042</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Marcel</div>
+        <div class="card-desc">Painter.</div>
+        <div class="card-meta"><span class="tag">Painting</span></div>
+        <div class="card-contact"><a href="tel:+31617544323">+31 6 17544323</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Prem</div>
+        <div class="card-desc">Painter.</div>
+        <div class="card-meta"><span class="tag">Painting</span></div>
+        <div class="card-contact"><a href="tel:+31642498247">+31 6 42498247</a></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;">Handyman &amp; Tradespeople</h3>
+    <div class="cards-grid" style="margin-bottom:24px;">
+      <div class="card searchable">
+        <div class="card-name">Clauda</div>
+        <div class="card-desc">Handyman, also does painting.</div>
+        <div class="card-meta"><span class="tag">Handyman</span><span class="tag">Painting</span></div>
+        <div class="card-contact"><a href="tel:0687254980">0687254980</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Turgay Altuntas</div>
+        <div class="card-desc">Furniture assembly, curtain installation. Lives in Lelystad. Positive feedback from 2+ community members.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Handyman</span></div>
+        <div class="card-contact"><a href="tel:0643988613">0643988613</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Klusbedrijf Square Angle (Hawre)</div>
+        <div class="card-desc">Very calm and organised. Lives in Lelystad. Positive feedback on flooring, ceiling, and bathroom sealant work.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Flooring</span><span class="tag">Renovation</span></div>
+        <div class="card-contact"><a href="tel:0628500031">0628500031</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Harry Loyall</div>
+        <div class="card-desc">Renovation and construction work.</div>
+        <div class="card-meta"><span class="tag">Renovation</span></div>
+        <div class="card-contact"><a href="tel:+31685085145">+31 6 85085145</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Jan Gerrit</div>
+        <div class="card-desc">Handyman and general services.</div>
+        <div class="card-meta"><span class="tag">Handyman</span></div>
+        <div class="card-contact"><a href="tel:+31615266371">+31 6 15266371</a> · <a href="https://jgservice.nl" target="_blank">jgservice.nl</a></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;">Electricians</h3>
+    <div class="cards-grid" style="margin-bottom:24px;">
+      <div class="card searchable">
+        <div class="card-name">Dinesh Kumar</div>
+        <div class="card-desc">Electrician based in Gouda.</div>
+        <div class="card-meta"><span class="tag location">Gouda</span><span class="tag">Electrician</span></div>
+        <div class="card-contact"><a href="tel:+31680212882">+31 6 80212882</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Simo — Appliance Repair</div>
+        <div class="card-desc">Washing machine, dryer, dishwasher, and refrigerator repair. Lives in Lelystad. €59 for the first visit.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Appliance Repair</span></div>
+        <div class="card-contact"><a href="https://simowitgoedrepair.nl" target="_blank">simowitgoedrepair.nl</a></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;">Flooring</h3>
+    <div class="cards-grid" style="margin-bottom:24px;">
+      <div class="card searchable">
+        <div class="card-name">Homestyle Vloeren</div>
+        <div class="card-desc">Flooring store in Lelystad.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Flooring</span></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Laminaat Plaza</div>
+        <div class="card-desc">Good quality material. Note: leftover material cannot be returned. Approx. €500 to install 90m² flooring with skirting boards. Rooms must be empty of furniture. Delivery only to ground floor — tip the delivery person for inside delivery.</div>
+        <div class="card-meta"><span class="tag location">Almere</span><span class="tag">Flooring</span></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Roobol</div>
+        <div class="card-desc">Based in Almere but delivers to Lelystad.</div>
+        <div class="card-meta"><span class="tag location">Almere</span><span class="tag">Flooring</span></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Vloerette</div>
+        <div class="card-desc">Flooring store in Lelystad.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Flooring</span></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;">Renovation Specialists</h3>
+    <div class="cards-grid" style="margin-bottom:24px;">
+      <div class="card searchable">
+        <div class="card-name">Michel Hilversum</div>
+        <div class="card-desc">Toilet and bathroom renovation. Sample prices: bathroom ~€8k, 3 window replacements ~€3k, glass replacement in 2 existing frames + 2k for materials.</div>
+        <div class="card-meta"><span class="tag">Bathroom</span><span class="tag">Windows</span></div>
+        <div class="card-contact"><a href="tel:0642722727">0642722727</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Daniël Garden (Tiles)</div>
+        <div class="card-desc">Tiling work. Charged ~€20–22/m² for new tiles including removal of old tiles. Professional and good results.</div>
+        <div class="card-meta"><span class="tag">Tiling</span></div>
+        <div class="card-contact"><a href="tel:+31638506185">+31 6 38506185</a></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;">Roofing</h3>
+    <div class="cards-grid" style="margin-bottom:24px;">
+      <div class="card searchable">
+        <div class="card-name">R. de Haan Dakwerken B.V.</div>
+        <div class="card-desc">Good company for renewing roofs — applying new bitumen layer and steel trims. Good price, clean work, on time. (Recommended by community member Edwin.)</div>
+        <div class="card-meta"><span class="tag">Roofing</span></div>
+        <div class="card-contact"><a href="tel:0642242409">0642242409</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Flevo Dakwerken</div>
+        <div class="card-desc">Roofing services in Lelystad area.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Roofing</span></div>
+        <div class="card-contact"><a href="tel:0630166063">0630166063</a> · <a href="https://www.flevodakwerken.nl" target="_blank">flevodakwerken.nl</a></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;">Garden</h3>
+    <div class="cards-grid" style="margin-bottom:24px;">
+      <div class="card searchable">
+        <div class="card-name">Omar (Gardner)</div>
+        <div class="card-desc">Does very good work at a good price. Note: appointment availability may be limited — try calling ahead.</div>
+        <div class="card-meta"><span class="tag">Gardening</span></div>
+        <div class="card-contact"><a href="tel:0645258341">0645258341</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">ZAM Sierbestrating, Tuinhout &amp; Hoveniers</div>
+        <div class="card-desc">Garden paving, wood and landscaping services.</div>
+        <div class="card-meta"><span class="tag">Landscaping</span><span class="tag">Paving</span></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Marquis Garden Awning</div>
+        <div class="card-desc">Garden awning supplier.</div>
+        <div class="card-meta"><span class="tag">Garden</span><span class="tag">Awning</span></div>
+        <div class="card-contact"><a href="https://marquis.nu" target="_blank">marquis.nu</a></div>
+      </div>
+    </div>
+
+    <h3 style="font-size:0.9rem;font-weight:600;color:var(--text-muted);margin-bottom:12px;">Solar &amp; Other</h3>
+    <div class="cards-grid">
+      <div class="card searchable">
+        <div class="card-name">Jay Solar Fest</div>
+        <div class="card-desc">Solar panel services.</div>
+        <div class="card-meta"><span class="tag">Solar</span></div>
+        <div class="card-contact"><a href="tel:0639247854">0639247854</a></div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">De Slotendokter</div>
+        <div class="card-desc">Locksmith. €95 per visit.</div>
+        <div class="card-meta"><span class="tag">Locksmith</span></div>
+        <div class="card-contact"><a href="tel:0617017030">0617017030</a> · <a href="https://www.deslotendokter.nl" target="_blank">deslotendokter.nl</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPORT -->
+  <section class="section" id="transport">
+    <div class="section-header">
+      <span class="section-icon">🚗</span>
+      <h2>Transport &amp; Moving</h2>
+      <span class="section-count">8 listings</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card searchable">
+        <div class="card-name">Uber</div>
+        <div class="card-desc">A good option during the day. Scheduling early morning rides (3–6 AM) to Schiphol can be risky — a driver may not get assigned.</div>
+        <div class="card-meta"><span class="tag">Taxi</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Hamraz Taxi</div>
+        <div class="card-desc">Local taxi service.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Taxi</span></div>
+        <div class="card-contact"><a href="tel:0619374755">0619374755</a> / <a href="tel:0850601036">0850601036</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Axie Taxi Lelystad</div>
+        <div class="card-desc">Local taxi service in Lelystad.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Taxi</span></div>
+        <div class="card-contact"><a href="tel:0687448899">0687448899</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Brenger.nl</div>
+        <div class="card-desc">Like Uber but for moving things. Fully transparent pricing.</div>
+        <div class="card-meta"><span class="tag">Moving</span></div>
+        <div class="card-contact"><a href="https://brenger.nl" target="_blank">brenger.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Andre Rous</div>
+        <div class="card-desc">Moving items and disposing of all kinds of waste. Very helpful — 3+ positive reviews from community members.</div>
+        <div class="card-meta"><span class="tag">Moving</span><span class="tag">Waste Disposal</span></div>
+        <div class="card-contact"><a href="tel:+31646282125">+31 6 46282125</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Charles Transport</div>
+        <div class="card-desc">Transport services. Very helpful. €30 per trip.</div>
+        <div class="card-meta"><span class="tag">Transport</span></div>
+        <div class="card-contact"><a href="tel:0642492833">0642492833</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Marcel (Trailer Rental)</div>
+        <div class="card-desc">Trailer rental for personal use. Friendly, responds quickly, available anytime.</div>
+        <div class="card-meta"><span class="tag">Trailer Rental</span></div>
+        <div class="card-contact"><a href="tel:+31613321446">+31 6 13321446</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">TotalWash — Smit (Car Wash)</div>
+        <div class="card-desc">Car wash. Get discount coupons via Tripper for approx. €7.50 per premium wash.</div>
+        <div class="card-meta"><span class="tag">Car Wash</span></div>
+        <div class="card-contact"><a href="https://www.tripper.nl/deal/premium-carwash-bij-250-locaties-korting" target="_blank">Tripper coupon</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MISC -->
+  <section class="section" id="misc">
+    <div class="section-header">
+      <span class="section-icon">✨</span>
+      <h2>Professional Services &amp; Misc</h2>
+      <span class="section-count">14 listings</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="card searchable">
+        <div class="card-name">Pranshu Dwivedi (Pandit)</div>
+        <div class="card-desc">Pandit for Greh Pravesh (housewarming) ceremonies in Lelystad.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Religious</span></div>
+        <div class="card-contact"><a href="tel:0633055806">0633055806</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Marcel (Tax Filing)</div>
+        <div class="card-desc">Tax filing services. Charges less than €100.</div>
+        <div class="card-meta"><span class="tag">Tax</span></div>
+        <div class="card-contact"><a href="tel:+31648616558">+31 6 48616558</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Bert Wiggerink (Tax Filing)</div>
+        <div class="card-desc">Tax filing. Charges less than €100.</div>
+        <div class="card-meta"><span class="tag">Tax</span></div>
+        <div class="card-contact"><a href="tel:+31622983582">+31 6 22983582</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Belastingdienst</div>
+        <div class="card-desc">Free tax filing via the Dutch tax authority. Make an appointment to visit their desk.</div>
+        <div class="card-meta"><span class="tag">Tax</span><span class="tag">Free</span></div>
+        <div class="card-contact"><a href="https://www.belastingdienst.nl/wps/wcm/connect/nl/contact/content/afspraak-maken-balie-bezoeken" target="_blank">belastingdienst.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Shavita</div>
+        <div class="card-desc">Chartered Accountant — administration and taxes.</div>
+        <div class="card-meta"><span class="tag">Accountant</span><span class="tag">Tax</span></div>
+        <div class="card-contact"><a href="tel:651574236">651574236</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Sakshi Goyal</div>
+        <div class="card-desc">Financial and tax consultant.</div>
+        <div class="card-meta"><span class="tag">Finance</span><span class="tag">Tax</span></div>
+        <div class="card-contact"><a href="tel:+31687639445">+31 6 87639445</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Rijschool Irfaan</div>
+        <div class="card-desc">Driving instructor.</div>
+        <div class="card-meta"><span class="tag">Driving Lessons</span></div>
+        <div class="card-contact"><a href="tel:0683036982">06 83036982</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Krishan Kapoor</div>
+        <div class="card-desc">Driving instructor.</div>
+        <div class="card-meta"><span class="tag">Driving Lessons</span></div>
+        <div class="card-contact"><a href="tel:652717782">652717782</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Lely Print</div>
+        <div class="card-desc">Customised gifting options: t-shirts, mugs, tumblers, water bottles, thermal flasks, keychains, magnets — laser engraving and vinyl labelling.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Printing</span><span class="tag">Gifts</span></div>
+        <div class="card-contact"><a href="tel:+31624750291">+31 6 24750291</a> · <a href="https://lelyprints.nl" target="_blank">lelyprints.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Lopamudra Bose</div>
+        <div class="card-desc">Dog and cat sitter in Lelystad — can take care of your pets at your own place.</div>
+        <div class="card-meta"><span class="tag location">Lelystad</span><span class="tag">Pet Care</span></div>
+        <div class="card-contact"><a href="tel:+31649271208">+31 6 49271208</a> · <a href="https://www.petbacker.nl/q/31278" target="_blank">petbacker.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">BandanGarage</div>
+        <div class="card-desc">Puncture repair. €25–30 per repair.</div>
+        <div class="card-meta"><span class="tag">Garage</span><span class="tag">Tyres</span></div>
+        <div class="card-contact"><a href="tel:310320419978">310320419978</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Billincasso</div>
+        <div class="card-desc">Debt recovery service — for recovering money from people or contractors unwilling to pay.</div>
+        <div class="card-meta"><span class="tag">Legal</span><span class="tag">Debt Recovery</span></div>
+        <div class="card-contact"><a href="https://billincasso.nl" target="_blank">billincasso.nl</a></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Bedroom Furnishing</div>
+        <div class="card-desc">Recommended stores: Beter Bed, MamaLoes (babies &amp; kids), Swiss Sense, TotalBED.</div>
+        <div class="card-meta"><span class="tag">Furniture</span><span class="tag">Bedding</span></div>
+      </div>
+
+      <div class="card searchable">
+        <div class="card-name">Kitchen Suppliers</div>
+        <div class="card-desc">Recommended stores: Grando, Keuken Kampioen, Nolte, Van den Hazel.</div>
+        <div class="card-meta"><span class="tag">Kitchen</span><span class="tag">Furniture</span></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <p>Lelystad Guide — a community resource by residents, for residents.</p>
+    <p style="margin-top:8px;">For city services and official information visit <a href="https://www.lelystad.nl" target="_blank">lelystad.nl</a> · All listings are community-sourced. No endorsement implied.</p>
+  </div>
+</footer>
+
+<script>
+  function filterCards(query) {
+    const q = query.toLowerCase().trim();
+    const cards = document.querySelectorAll('.card.searchable');
+    let visibleSections = new Set();
+
+    cards.forEach(card => {
+      const text = card.textContent.toLowerCase();
+      const match = !q || text.includes(q);
+      card.classList.toggle('hidden', !match);
+      if (match) {
+        const section = card.closest('.section');
+        if (section) visibleSections.add(section.id);
+      }
+    });
+
+    // Show/hide section headers based on whether any card is visible
+    document.querySelectorAll('.section').forEach(section => {
+      const anyVisible = section.querySelectorAll('.card.searchable:not(.hidden)').length > 0;
+      // Keep section visible if it has visible cards; hide if filtering and none match
+      if (q) {
+        section.style.display = anyVisible ? '' : 'none';
+      } else {
+        section.style.display = '';
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
