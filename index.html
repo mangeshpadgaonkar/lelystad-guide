@@ -253,6 +253,14 @@
       <span class="tile-icon">🎉</span>
       <span class="tile-label">Party Halls &amp; Events</span>
     </a>
+    <a class="tile" onclick="showSection('beauty')">
+      <span class="tile-icon">💇</span>
+      <span class="tile-label">Beauty &amp; Tailoring</span>
+    </a>
+    <a class="tile" onclick="showSection('local-events')">
+      <span class="tile-icon">📅</span>
+      <span class="tile-label">What's On in Lelystad</span>
+    </a>
   </div>
 
   <a href="https://www.lelystad.nl" target="_blank" class="gemeente-link">🏛️ Gemeente Lelystad official website</a>
@@ -555,6 +563,81 @@
         <div class="card-name">Cake Makers — Coming Soon</div>
         <div class="card-desc">We have contacts for local cake makers in Lelystad — details being added shortly. Ask in the community group in the meantime.</div>
         <div class="card-meta"><span class="tag">Placeholder</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     BEAUTY & TAILORING
+═══════════════════════════════════════ -->
+<div class="section-page" id="sec-beauty">
+  <div class="section-header-bar">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <h2>💇 Beauty &amp; Tailoring</h2>
+    <div class="search-wrap"><input type="text" placeholder="Search…" oninput="filterSection(this,'sec-beauty')"></div>
+  </div>
+  <div class="section-body">
+
+    <div class="sub-heading">Beauty Parlours &amp; Hair Salons</div>
+    <div class="cards-grid">
+      <div class="card searchable">
+        <div class="card-name">Beauty Services — Coming Soon</div>
+        <div class="card-desc">Know a good parlour, threading service, or hair salon in Lelystad? Share the details in the community group and we'll add them here.</div>
+        <div class="card-meta"><span class="tag">Placeholder</span></div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Tailoring &amp; Dress Alterations</div>
+    <div class="cards-grid">
+      <div class="card searchable">
+        <div class="card-name">Tailoring — Coming Soon</div>
+        <div class="card-desc">Looking for someone to stitch or alter Indian clothes, blouses, or outfits? Share contacts in the community group so we can add them here.</div>
+        <div class="card-meta"><span class="tag">Placeholder</span></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     WHAT'S ON IN LELYSTAD
+═══════════════════════════════════════ -->
+<div class="section-page" id="sec-local-events">
+  <div class="section-header-bar">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <h2>📅 What's On in Lelystad</h2>
+  </div>
+  <div class="section-body">
+    <p style="font-size:0.85rem;color:var(--muted);margin-bottom:28px;">Events and agenda from local venues. Click any venue to see their full programme.</p>
+
+    <div class="sub-heading">Poppodium Corneel</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <div>
+        <div style="font-weight:600;margin-bottom:4px;">Corneel — Music &amp; Events</div>
+        <div style="font-size:0.84rem;color:var(--muted);margin-bottom:12px;">Lelystad's music venue for concerts, club nights and cultural events.</div>
+        <a href="https://www.corneel.nl/agenda" target="_blank" style="display:inline-block;background:var(--green);color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:0.85rem;font-weight:600;">View Corneel Agenda →</a>
+      </div>
+    </div>
+
+    <div class="sub-heading">De Kubus</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <div>
+        <div style="font-weight:600;margin-bottom:4px;">De Kubus — Theatre &amp; Culture</div>
+        <div style="font-size:0.84rem;color:var(--muted);margin-bottom:12px;">Theatre, shows, and cultural events in Lelystad.</div>
+        <a href="https://www.dekubuslelystad.nl/agenda" target="_blank" style="display:inline-block;background:var(--green);color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:0.85rem;font-weight:600;">View Kubus Agenda →</a>
+      </div>
+    </div>
+
+    <div class="sub-heading">Gemeente Lelystad</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:24px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+      <div>
+        <div style="font-weight:600;margin-bottom:4px;">Gemeente Lelystad — Official Agenda</div>
+        <div style="font-size:0.84rem;color:var(--muted);margin-bottom:12px;">Official city events, markets, and public activities.</div>
+        <a href="https://www.gemeentelelystad.nl/actueel/agenda" target="_blank" style="display:inline-block;background:var(--green);color:#fff;padding:8px 18px;border-radius:8px;text-decoration:none;font-size:0.85rem;font-weight:600;">View City Agenda →</a>
       </div>
     </div>
 
