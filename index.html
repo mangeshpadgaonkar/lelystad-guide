@@ -57,7 +57,7 @@
   /* ── NAV TILES ── */
   .tiles {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 12px;
     width: 100%;
     max-width: 900px;
@@ -227,15 +227,11 @@
     </a>
     <a class="tile" onclick="showSection('food-delivery')">
       <span class="tile-icon">📦</span>
-      <span class="tile-label">Food Delivery &amp; Home Kitchens</span>
+      <span class="tile-label">Home Kitchens &amp; Takeaway</span>
     </a>
     <a class="tile" onclick="showSection('restaurants')">
       <span class="tile-icon">🍽️</span>
       <span class="tile-label">Restaurants</span>
-    </a>
-    <a class="tile" onclick="showSection('hard-to-find')">
-      <span class="tile-icon">🔍</span>
-      <span class="tile-label">Hard to Find Foods</span>
     </a>
     <a class="tile" onclick="showSection('services')">
       <span class="tile-icon">⚙️</span>
@@ -252,6 +248,10 @@
     <a class="tile" onclick="showSection('misc')">
       <span class="tile-icon">✨</span>
       <span class="tile-label">Professional &amp; Misc</span>
+    </a>
+    <a class="tile" onclick="showSection('events')">
+      <span class="tile-icon">🎉</span>
+      <span class="tile-label">Party Halls &amp; Events</span>
     </a>
   </div>
 
@@ -281,6 +281,20 @@
       <div class="card searchable"><div class="card-name">Ganesha Store</div><div class="card-desc">Indian grocery store based in Almere.</div><div class="card-meta"><span class="tag loc">Almere</span></div><div class="card-contact"><a href="https://ganeshstore.nl" target="_blank">ganeshstore.nl</a></div></div>
       <div class="card searchable"><div class="card-name">Sara Foods</div><div class="card-desc">Grocery delivery serving both Almere and Lelystad.</div><div class="card-meta"><span class="tag loc">Lelystad</span><span class="tag">Delivery</span></div><div class="card-contact"><a href="https://sarafoods.nl" target="_blank">sarafoods.nl</a></div></div>
     </div>
+
+    <div class="sub-heading">💡 Hard to find? Here's where to look</div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;">
+      <table class="htf-table">
+        <thead><tr><th>Item</th><th>Where to find it</th></tr></thead>
+        <tbody>
+          <tr><td>Fish &amp; Seafood</td><td>Saturday Market · Alboranseá (LelyCentre) · Indian Meat Wave</td></tr>
+          <tr><td>Goat Meat</td><td>Sara Foods · ER Slagerij (LelyCentre) · Mix Markt · Indian Meat Wave</td></tr>
+          <tr><td>Momos</td><td>Taste of Nepal — Sharda Rai · <a href="tel:+31628915869">+31 6 28915869</a></td></tr>
+          <tr><td>Fresh Indian veg (methi, ladyfinger, brinjal)</td><td>LelyKirana · Saturday Market (Ams Food stall)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </div>
 
@@ -291,7 +305,7 @@
 <div class="section-page" id="sec-food-delivery">
   <div class="section-header-bar">
     <button class="back-btn" onclick="goHome()">← Back</button>
-    <h2>📦 Food Delivery &amp; Home Kitchens</h2>
+    <h2>📦 Home Kitchens &amp; Takeaway</h2>
     <div class="search-wrap"><input type="text" placeholder="Search…" oninput="filterSection(this,'sec-food-delivery')"></div>
   </div>
   <div class="section-body">
@@ -326,29 +340,6 @@
     <div class="cards-grid">
       <div class="card searchable"><div class="card-name">Indian Taste</div><div class="card-desc">Order via their website (sometimes discounts) or Thuisbezorgd. Has 1–2 tables at the location.</div><div class="card-meta"><span class="tag loc">Lelystad</span><span class="tag">Dine-in</span><span class="tag">Delivery</span></div></div>
       <div class="card searchable"><div class="card-name">Sher-E-Punjab</div><div class="card-desc">Order via website or Thuisbezorgd. Full restaurant with multiple tables.</div><div class="card-meta"><span class="tag loc">Lelystad</span><span class="tag">Full Restaurant</span><span class="tag">Delivery</span></div></div>
-    </div>
-  </div>
-</div>
-
-
-<!-- ══════════════════════════════════════
-     HARD TO FIND
-═══════════════════════════════════════ -->
-<div class="section-page" id="sec-hard-to-find">
-  <div class="section-header-bar">
-    <button class="back-btn" onclick="goHome()">← Back</button>
-    <h2>🔍 Hard to Find Foods</h2>
-  </div>
-  <div class="section-body">
-    <div style="overflow-x:auto; border-radius:10px; border:1px solid var(--border);">
-      <table class="htf-table">
-        <thead><tr><th>Item</th><th>Where to find it</th></tr></thead>
-        <tbody>
-          <tr><td>Fish &amp; Seafood</td><td>1. Saturday Market<br>2. Alboranseá (LelyCentre) — cooked and raw; cooked via Thuisbezorgd<br>3. Indian Meat Wave</td></tr>
-          <tr><td>Goat Meat</td><td>1. Sara Foods<br>2. ER Slagerij (LelyCentre)<br>3. Mix Markt (sometimes)<br>4. Indian Meat Wave</td></tr>
-          <tr><td>Momos (Indian / Nepali)</td><td>Taste of Nepal — Sharda Rai — <a href="tel:+31628915869">+31 6 28915869</a></td></tr>
-        </tbody>
-      </table>
     </div>
   </div>
 </div>
@@ -505,6 +496,68 @@
       <div class="card searchable"><div class="card-name">Bedroom Furnishing</div><div class="card-desc">Recommended: Beter Bed, MamaLoes (babies &amp; kids), Swiss Sense, TotalBED.</div><div class="card-meta"><span class="tag">Furniture</span></div></div>
       <div class="card searchable"><div class="card-name">Kitchen Suppliers</div><div class="card-desc">Recommended: Grando, Keuken Kampioen, Nolte, Van den Hazel.</div><div class="card-meta"><span class="tag">Kitchen</span></div></div>
     </div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════
+     PARTY HALLS & EVENTS
+═══════════════════════════════════════ -->
+<div class="section-page" id="sec-events">
+  <div class="section-header-bar">
+    <button class="back-btn" onclick="goHome()">← Back</button>
+    <h2>🎉 Party Halls &amp; Events</h2>
+    <div class="search-wrap"><input type="text" placeholder="Search…" oninput="filterSection(this,'sec-events')"></div>
+  </div>
+  <div class="section-body">
+
+    <div class="sub-heading">Party Halls — Rent a Venue</div>
+    <div class="cards-grid">
+      <div class="card searchable">
+        <div class="card-name">Tjalk Cafeteria</div>
+        <div class="card-desc">Community cafeteria available for private hire. Popular for Indian community events and birthday parties.</div>
+        <div class="card-meta"><span class="tag loc">Lelystad</span><span class="tag">Hall Hire</span></div>
+        <div class="card-contact">
+          <a href="https://maps.google.com/?q=Tjalk+Cafeteria+Lelystad" target="_blank">📍 View on Google Maps</a>
+        </div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Poppodium Corneel</div>
+        <div class="card-desc">Music venue and event space available for private hire. Suitable for larger gatherings and celebrations.</div>
+        <div class="card-meta"><span class="tag loc">Lelystad</span><span class="tag">Hall Hire</span><span class="tag">Large Events</span></div>
+        <div class="card-contact">
+          <a href="https://www.poppodiumcorneel.nl" target="_blank">poppodiumcorneel.nl</a><br>
+          <a href="https://maps.google.com/?q=Poppodium+Corneel+Lelystad" target="_blank">📍 View on Google Maps</a>
+        </div>
+      </div>
+      <div class="card searchable">
+        <div class="card-name">Koffie Kamer</div>
+        <div class="card-desc">Cosy café space available for private hire. Good for smaller gatherings, baby showers, and get-togethers.</div>
+        <div class="card-meta"><span class="tag loc">Lelystad</span><span class="tag">Hall Hire</span><span class="tag">Small Events</span></div>
+        <div class="card-contact">
+          <a href="https://maps.google.com/?q=Koffie+Kamer+Lelystad" target="_blank">📍 View on Google Maps</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Event Equipment Hire</div>
+    <div class="cards-grid">
+      <div class="card searchable">
+        <div class="card-name">Equipment Hire — Coming Soon</div>
+        <div class="card-desc">Know someone who rents out tables, chairs, crockery, decorations or catering equipment for events? Share their details in the community group so we can add them here.</div>
+        <div class="card-meta"><span class="tag">Placeholder</span></div>
+      </div>
+    </div>
+
+    <div class="sub-heading">Cake Makers</div>
+    <div class="cards-grid">
+      <div class="card searchable">
+        <div class="card-name">Cake Makers — Coming Soon</div>
+        <div class="card-desc">We have contacts for local cake makers in Lelystad — details being added shortly. Ask in the community group in the meantime.</div>
+        <div class="card-meta"><span class="tag">Placeholder</span></div>
+      </div>
+    </div>
+
   </div>
 </div>
 
