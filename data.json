@@ -1,0 +1,143 @@
+{
+  "sections": [
+    {
+      "id": "groceries",
+      "title": "Groceries",
+      "entries": [
+        { "name": "Ams Food Market", "desc": "Grocery store in Lelystad. Also at the Saturday market with fresh food: idli, dosa and South Indian specialities. Also on Thuisbezorgd.", "tags": ["Lelystad", "Indian", "Saturday Market"] },
+        { "name": "Indian Meat Wave", "desc": "Goat meat (Halal), Indian fish varieties, and seafood including crab.", "tags": ["Lelystad", "Halal", "Seafood"] },
+        { "name": "LelyKirana", "desc": "Grocery delivery based in Lelystad. Stocks fresh Indian vegetables: methi, ladyfinger, brinjal and more.", "tags": ["Lelystad", "Delivery", "Fresh Veg"], "website": "https://lelykirana.nl" },
+        { "name": "Vikash Cosmetics", "desc": "Grocery store based in Lelystad with Indian products.", "tags": ["Lelystad", "Indian"] },
+        { "name": "ER Slagerij (LelyCentre)", "desc": "Not an Indian store, but offers fresh goat meat and whole spices: cumin, cinnamon, cardamom.", "tags": ["LelyCentre", "Goat Meat", "Spices"] },
+        { "name": "Mix Markt", "desc": "Not an Indian store, but carries lamb and sometimes goat meat. Also stocks whole spices.", "tags": ["Lelystad", "Lamb", "Spices"] },
+        { "name": "Tropisch Centrum Oompie", "desc": "Surinamese store in Lelystad. Stocks most Indian grocery staples.", "tags": ["Lelystad", "Surinamese", "Indian"] },
+        { "name": "Chilly Flakes", "desc": "Delivers to Lelystad. Based in Almere.", "tags": ["Almere", "Delivery"] },
+        { "name": "Ganesha Store", "desc": "Indian grocery store based in Almere.", "tags": ["Almere"], "website": "https://ganeshstore.nl" },
+        { "name": "Sara Foods", "desc": "Grocery delivery serving both Almere and Lelystad.", "tags": ["Lelystad", "Delivery"], "website": "https://sarafoods.nl" }
+      ]
+    },
+    {
+      "id": "food-delivery",
+      "title": "Home Kitchens & Takeaway",
+      "entries": [
+        { "name": "Koku's Kitchen", "desc": "Check Lelystad Food Connect Facebook group for menus. Takes party orders.", "tags": ["Lelystad", "Party Orders"] },
+        { "name": "Farah's Kitchen", "desc": "Check Lelystad Food Connect for menus. Takes party orders.", "tags": ["Lelystad", "Party Orders"] },
+        { "name": "Indian Biryani Zone", "desc": "Biryani specialist. Check Lelystad Food Connect for menus. Takes party orders.", "tags": ["Lelystad", "Biryani"] },
+        { "name": "Jain Kitchen", "desc": "Jain food. Check Lelystad Food Connect for menus. Takes party orders.", "tags": ["Lelystad", "Jain Food"], "phone": "+31625206866" },
+        { "name": "Yoshi's Kitchen", "desc": "Check Lelystad Food Connect for menus. Takes party orders.", "tags": ["Lelystad"], "website": "https://yoshiskitchen.nl" },
+        { "name": "Sara Foods", "desc": "Home kitchen. Check Lelystad Food Connect for menus.", "tags": ["Lelystad"], "website": "https://sarafoods.nl" },
+        { "name": "Indian Plate Almere", "desc": "Delivers to Lelystad. Based in Almere.", "tags": ["Almere", "Delivery to Lelystad"], "phone": "+918019697900" },
+        { "name": "North Indian-Rajasthani Rasoi", "desc": "North Indian and Rajasthani cuisine. Delivers to Lelystad from Almere.", "tags": ["Almere", "Rajasthani"], "phone": "+31620501182" },
+        { "name": "Taste of Godavari", "desc": "Based in Almere, delivers to Lelystad. Check Lelystad Food Connect for menus.", "tags": ["Almere"] },
+        { "name": "Taste of Nepal - Sharda Rai", "desc": "Cloud kitchen. Indian/Nepali style momos and more.", "tags": ["Lelystad", "Momos"], "phone": "+31628915869" },
+        { "name": "Ams Food Market Stall", "desc": "Food stall at Saturday market serving idli, dosa, roti roll, and biryani.", "tags": ["Lelystad", "Saturday Market"] },
+        { "name": "Brijwasi Kitchen", "desc": "Vegetarian kitchen — party orders and catering. Kachori and more. Address: Fortuyn 6, 8242 JA Lelystad.", "tags": ["Lelystad", "Vegetarian", "Party Orders", "Catering"] }
+      ]
+    },
+    {
+      "id": "restaurants",
+      "title": "Restaurants",
+      "entries": [
+        { "name": "Indian Taste", "desc": "Order via their website (sometimes discounts) or Thuisbezorgd. Has 1-2 tables at the location.", "tags": ["Lelystad", "Dine-in", "Delivery"] },
+        { "name": "Sher-E-Punjab", "desc": "Order via website or Thuisbezorgd. Full restaurant with multiple tables.", "tags": ["Lelystad", "Full Restaurant", "Delivery"] }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "Utility & Services",
+      "entries": [
+        { "name": "Liander", "desc": "Power grid operator for Lelystad. Check for outages on their site.", "tags": ["Electricity Grid"], "website": "https://www.liander.nl/storingen-en-onderhoud" },
+        { "name": "Vitens", "desc": "Water provider for Lelystad.", "tags": ["Water"], "website": "https://waterstoring.nl" },
+        { "name": "Odido", "desc": "Internet service provider in Lelystad.", "tags": ["Internet"] },
+        { "name": "Feenstra", "desc": "Boiler maintenance. Tip: service every 1.5 years.", "tags": ["Boiler", "Maintenance"] },
+        { "name": "Rishi (Plumber)", "desc": "Plumber in Lelystad area.", "tags": ["Plumbing"], "phone": "0634929952" },
+        { "name": "Zeker en Mobiel", "desc": "Drainage cleaning and maintenance.", "tags": ["Drainage"] },
+        { "name": "Ventilation Services", "desc": "Mechanical ventilation must be cleaned regularly by a certified company.", "tags": ["Ventilation"] },
+        { "name": "Ramoe", "desc": "Electrical services in Lelystad.", "tags": ["Lelystad", "Electrician"], "phone": "+31627506692", "website": "https://tedar.nl" }
+      ]
+    },
+    {
+      "id": "home",
+      "title": "Home & Trades",
+      "entries": [
+        { "name": "Cleannet", "desc": "Fixed pricing, multiple employees. One-time or recurring. Invoice only — no cash.", "tags": ["Cleaning"], "website": "https://cleannet.nl" },
+        { "name": "Viviane", "desc": "House cleaner.", "tags": ["Cleaning"], "phone": "+31634530567" },
+        { "name": "Michelle Hrazdira", "desc": "Specialist in painting windows and doors.", "tags": ["Painting"], "phone": "0620145381" },
+        { "name": "Eser", "desc": "Stucco/plaster, painting, and handyman work.", "tags": ["Plastering", "Painting"], "phone": "+31611518042" },
+        { "name": "Marcel", "desc": "Painter.", "tags": ["Painting"], "phone": "+31617544323" },
+        { "name": "Prem", "desc": "Painter.", "tags": ["Painting"], "phone": "+31642498247" },
+        { "name": "Clauda", "desc": "Handyman, also does painting.", "tags": ["Handyman"], "phone": "0687254980" },
+        { "name": "Turgay Altuntas", "desc": "Furniture assembly, curtain installation. Lives in Lelystad.", "tags": ["Lelystad", "Handyman"], "phone": "0643988613" },
+        { "name": "Klusbedrijf Square Angle (Hawre)", "desc": "Flooring, ceiling, bathroom sealant. Lives in Lelystad. Very organised.", "tags": ["Lelystad", "Flooring"], "phone": "0628500031" },
+        { "name": "Harry Loyall", "desc": "Renovation and construction.", "tags": ["Renovation"], "phone": "+31685085145" },
+        { "name": "Jan Gerrit", "desc": "Handyman and general services.", "tags": ["Handyman"], "phone": "+31615266371", "website": "https://jgservice.nl" },
+        { "name": "Ramoe", "desc": "Electrical services in Lelystad.", "tags": ["Lelystad", "Electrician"], "phone": "+31627506692", "website": "https://tedar.nl" },
+        { "name": "Dinesh Kumar", "desc": "Electrician based in Gouda.", "tags": ["Gouda", "Electrician"], "phone": "+31680212882" },
+        { "name": "Simo - Appliance Repair", "desc": "Washing machine, dryer, dishwasher, fridge repair. Lives in Lelystad. €59 first visit.", "tags": ["Lelystad", "Appliance Repair"], "website": "https://simowitgoedrepair.nl" },
+        { "name": "Homestyle Vloeren", "desc": "Flooring store in Lelystad.", "tags": ["Lelystad"] },
+        { "name": "Laminaat Plaza", "desc": "Good quality. ~€500 to install 90m2 with skirting boards. Rooms must be empty. Delivery to ground floor only.", "tags": ["Almere"] },
+        { "name": "Roobol", "desc": "Based in Almere, delivers to Lelystad.", "tags": ["Almere"] },
+        { "name": "Vloerette", "desc": "Flooring store in Lelystad.", "tags": ["Lelystad"] },
+        { "name": "Michel Hilversum", "desc": "Toilet and bathroom renovation. ~€8k for bathroom, ~€3k for 3 windows.", "tags": ["Bathroom", "Windows"], "phone": "0642722727" },
+        { "name": "Daniel Garden (Tiles)", "desc": "Tiling work. ~€20-22/m2 including old tile removal.", "tags": ["Tiling"], "phone": "+31638506185" },
+        { "name": "R. de Haan Dakwerken B.V.", "desc": "Roof renewal — bitumen and steel trims. Good price, clean, on time.", "tags": ["Roofing"], "phone": "0642242409" },
+        { "name": "Flevo Dakwerken", "desc": "Roofing in Lelystad area.", "tags": ["Lelystad"], "phone": "0630166063", "website": "https://www.flevodakwerken.nl" },
+        { "name": "Omar (Gardner)", "desc": "Good work at a good price. Call ahead — availability can be limited.", "tags": ["Gardening"], "phone": "0645258341" },
+        { "name": "ZAM Sierbestrating", "desc": "Garden paving, wood and landscaping.", "tags": ["Landscaping"] },
+        { "name": "Marquis Garden Awning", "desc": "Garden awning supplier.", "tags": ["Garden"], "website": "https://marquis.nu" },
+        { "name": "Jay Solar Fest", "desc": "Solar panel services.", "tags": ["Solar"], "phone": "0639247854" },
+        { "name": "De Slotendokter", "desc": "Locksmith. €95 per visit.", "tags": ["Locksmith"], "phone": "0617017030", "website": "https://www.deslotendokter.nl" }
+      ]
+    },
+    {
+      "id": "transport",
+      "title": "Transport & Moving",
+      "entries": [
+        { "name": "Uber", "desc": "Good during the day. Early morning Schiphol rides (3-6 AM) can be unreliable — driver may not be assigned.", "tags": ["Taxi"] },
+        { "name": "Hamraz Taxi", "desc": "Local taxi service.", "tags": ["Lelystad", "Taxi"], "phone": "0619374755" },
+        { "name": "Axie Taxi Lelystad", "desc": "Local taxi service.", "tags": ["Lelystad", "Taxi"], "phone": "0687448899" },
+        { "name": "Brenger.nl", "desc": "Like Uber but for moving things. Transparent pricing.", "tags": ["Moving"], "website": "https://brenger.nl" },
+        { "name": "Andre Rous", "desc": "Moving items and waste disposal. Very helpful — 3+ positive reviews.", "tags": ["Moving", "Waste Disposal"], "phone": "+31646282125" },
+        { "name": "Charles Transport", "desc": "Transport services. Very helpful. €30 per trip.", "tags": ["Transport"], "phone": "0642492833" },
+        { "name": "Marcel (Trailer Rental)", "desc": "Trailer rental. Friendly, quick to respond, available anytime.", "tags": ["Trailer Rental"], "phone": "+31613321446" },
+        { "name": "TotalWash - Smit (Car Wash)", "desc": "Car wash. Discount coupons via Tripper ~€7.50 per premium wash.", "tags": ["Car Wash"] }
+      ]
+    },
+    {
+      "id": "misc",
+      "title": "Professional Services & Misc",
+      "entries": [
+        { "name": "Pranshu Dwivedi (Pandit)", "desc": "Pandit for Greh Pravesh (housewarming) ceremonies in Lelystad.", "tags": ["Lelystad", "Religious"], "phone": "0633055806" },
+        { "name": "Marcel (Tax Filing)", "desc": "Tax filing. Charges less than €100.", "tags": ["Tax"], "phone": "+31648616558" },
+        { "name": "Bert Wiggerink (Tax Filing)", "desc": "Tax filing. Charges less than €100.", "tags": ["Tax"], "phone": "+31622983582" },
+        { "name": "Belastingdienst", "desc": "Free tax filing via the Dutch tax authority. Make an appointment to visit their desk.", "tags": ["Tax", "Free"], "website": "https://www.belastingdienst.nl" },
+        { "name": "Shavita", "desc": "Chartered Accountant — administration and taxes.", "tags": ["Accountant"], "phone": "651574236", "website": "https://finance.tedar.nl" },
+        { "name": "Sakshi Goyal", "desc": "Financial and tax consultant.", "tags": ["Finance", "Tax"], "phone": "+31687639445" },
+        { "name": "Rijschool Irfaan", "desc": "Driving instructor.", "tags": ["Driving Lessons"], "phone": "0683036982" },
+        { "name": "Krishan Kapoor", "desc": "Driving instructor.", "tags": ["Driving Lessons"], "phone": "652717782" },
+        { "name": "Printkriya", "desc": "Custom gifting: t-shirts, mugs, tumblers, keychains — laser engraving and vinyl labelling.", "tags": ["Lelystad", "Printing"], "phone": "+31624750291", "website": "https://printkriya.nl" },
+        { "name": "Mangesh Padgaonkar", "desc": "IT Infrastructure services.", "tags": ["Lelystad", "IT"] },
+        { "name": "Lopamudra Bose", "desc": "Dog and cat sitter in Lelystad — at your own place.", "tags": ["Lelystad", "Pet Care"], "phone": "+31649271208", "website": "https://www.petbacker.nl/q/31278" },
+        { "name": "BandanGarage", "desc": "Puncture repair. €25-30 per repair.", "tags": ["Garage"], "phone": "310320419978" },
+        { "name": "Billincasso", "desc": "Debt recovery — for recovering money from people or contractors unwilling to pay.", "tags": ["Legal"], "website": "https://billincasso.nl" }
+      ]
+    },
+    {
+      "id": "events",
+      "title": "Party Halls & Events",
+      "entries": [
+        { "name": "Tjalk Cafeteria", "desc": "Community cafeteria available for private hire. Popular for Indian community events and birthday parties.", "tags": ["Lelystad", "Hall Hire"] },
+        { "name": "Poppodium Corneel", "desc": "Music venue and event space available for private hire. Suitable for larger gatherings and celebrations.", "tags": ["Lelystad", "Hall Hire", "Large Events"], "website": "https://www.corneel.nl" },
+        { "name": "Koffie Kamer", "desc": "Cosy cafe space available for private hire. Good for smaller gatherings, baby showers, and get-togethers.", "tags": ["Lelystad", "Hall Hire", "Small Events"] }
+      ]
+    },
+    {
+      "id": "beauty",
+      "title": "Beauty & Tailoring",
+      "entries": [
+        { "name": "Beauty Services", "desc": "Coming soon — share parlour, threading or hair salon contacts in the community group.", "tags": ["Placeholder"] },
+        { "name": "Tailoring & Dress Alterations", "desc": "Coming soon — share tailoring contacts in the community group.", "tags": ["Placeholder"] }
+      ]
+    }
+  ]
+}
