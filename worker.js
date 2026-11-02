@@ -1,10 +1,7 @@
-import data from './data.json';
-
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
 
-    // CORS headers for the chat endpoint
     const corsHeaders = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
@@ -26,7 +23,11 @@ export default {
           });
         }
 
-        // Build a compact context string from the JSON listings
+        // Load listings from static asset
+        const dataRes = await env.ASSETS.fetch(new Request('https://placeholder/data.json'));
+        const data = await dataRes.json();
+
+        // Build context string from listings
         const context = data.sections.map(section => {
           const entries = section.entries.map(e => {
             let line = `- ${e.name}: ${e.desc}`;
