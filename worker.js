@@ -1,5 +1,5 @@
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
 
     const corsHeaders = {
@@ -23,8 +23,9 @@ export default {
           });
         }
 
-        // Load listings from static asset
-        const dataRes = await env.ASSETS.fetch(new Request('https://placeholder/data.json'));
+        // Load data.json from static assets using the same origin
+        const dataUrl = new URL('/data.json', url.origin);
+        const dataRes = await env.ASSETS.fetch(new Request(dataUrl.toString()));
         const data = await dataRes.json();
 
         // Build context string from listings
@@ -60,14 +61,14 @@ ${context}`;
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       } catch (err) {
-        return new Response(JSON.stringify({ error: 'Something went wrong. Please try again.' }), {
+        return new Response(JSON.stringify({ error: err.message || 'Something went wrong.' }), {
           status: 500,
           headers: { ...corsHeaders, 'Content-Type': 'application/json' },
         });
       }
     }
 
-    // Serve static assets for everything else
-    return env.ASSETS.fetch(request);
+    // All other requests are served as static assets by Cloudflare automatically
+    return new Response('Not found', { status: 404 });
   },
 };

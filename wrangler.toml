@@ -7,7 +7,6 @@ binding = "AI"
 
 [assets]
 directory = "."
-binding = "ASSETS"
 
 [observability.logs]
 enabled = true
