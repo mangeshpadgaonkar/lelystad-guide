@@ -24,8 +24,7 @@ export default {
         }
 
         // Load data.json from static assets using the same origin
-        const dataUrl = new URL('/data.json', url.origin);
-        const dataRes = await env.ASSETS.fetch(new Request(dataUrl.toString()));
+        const dataRes = await fetch(new URL('/data.json', url.origin).toString());
         const data = await dataRes.json();
 
         // Build context string from listings
