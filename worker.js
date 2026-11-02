@@ -47,7 +47,7 @@ Always respond in the same language the user writes in (English, Dutch, or Hindi
 COMMUNITY GUIDE DATA:
 ${context}`;
 
-        const response = await env.AI.run('@cf/meta/llama-3.1-8b-instruct', {
+        const response = await env.AI.run('@cf/meta/llama-3.3-70b-instruct-fp8-fast', {
           messages: [
             { role: 'system', content: systemPrompt },
             { role: 'user', content: question.trim() },
